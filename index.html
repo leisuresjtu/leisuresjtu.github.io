@@ -1,213 +1,218 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
 <head>
+  <meta charset="UTF-8" />
   <title>HaiXu Li | Academic Homepage</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-  <!-- Academic style refinement -->
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --subtext: #555555;
+      --border: #dddddd;
+      --btn-bg: #f5f5f5;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eaeaea;
+      --subtext: #aaaaaa;
+      --border: #333333;
+      --btn-bg: #1e1e1e;
+    }
+
     body {
-      line-height: 1.6;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      transition: background 0.3s, color 0.3s;
     }
-    h1, h2, h3 {
-      letter-spacing: 0;
-      text-transform: none;
+
+    a {
+      color: var(--text);
     }
-    .post.featured {
-      padding-top: 2em;
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
     }
-    .lang-en { display: none; }
-    .lang-toggle {
-      position: fixed;
-      top: 1.2em;
-      right: 1.2em;
-      z-index: 1000;
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
     }
-    .lang-toggle button {
-      font-size: 0.8em;
-      padding: 0.4em 0.8em;
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+      color: var(--subtext);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .controls button {
+      margin-left: 0.4rem;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      background: var(--btn-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .lang-en {
+      display: none;
+    }
+
+    .cv-btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--subtext);
     }
   </style>
 </head>
 
-<body class="is-preload">
+<body>
 
-<!-- Language Switch -->
-<div class="lang-toggle">
-  <button onclick="switchLang('zh')">中文</button>
-  <button onclick="switchLang('en')">EN</button>
-</div>
-
-<div id="wrapper" class="fade-in">
-
-  <!-- Intro -->
-  <div id="intro">
-    <h1>HaiXu Li</h1>
-
-    <p class="lang-zh">
-      上海交通大学 机械与动力工程学院 本科生<br />
-      研究方向：隔振结构 · 结构力学 · 有限元分析
-    </p>
-
-    <p class="lang-en">
-      Undergraduate Student<br />
-      School of Mechanical Engineering, Shanghai Jiao Tong University<br />
-      Research Interests: Vibration Isolation · Structural Mechanics · FEM
-    </p>
-
-    <ul class="actions">
-      <li>
-        <a href="cv.pdf" class="button primary" target="_blank">
-          Download CV (PDF)
-        </a>
-      </li>
-    </ul>
-  </div>
+<div class="container">
 
   <!-- Header -->
-  <header id="header">
-    <a href="index.html" class="logo">Academic Homepage</a>
-  </header>
+  <div class="header">
+    <div>
+      <h1>HaiXu Li</h1>
 
-  <!-- Nav -->
-  <nav id="nav">
-    <ul class="links">
-      <li class="active"><a href="#">Home</a></li>
-    </ul>
-    <ul class="icons">
-      <li>
-        <a href="https://github.com/你的GitHub用户名" class="icon brands fa-github">
-          <span class="label">GitHub</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+      <p class="lang-zh">
+        上海交通大学 机械与动力工程学院 本科生<br>
+        研究方向：隔振结构 · 结构力学 · 有限元分析
+      </p>
 
-  <!-- Main -->
-  <div id="main">
+      <p class="lang-en">
+        Undergraduate Student<br>
+        School of Mechanical Engineering, Shanghai Jiao Tong University<br>
+        Research Interests: Vibration Isolation, Structural Mechanics, FEM
+      </p>
 
-    <!-- Research Focus -->
-    <article class="post featured">
-      <header class="major">
-        <span class="date">2025 – Present</span>
+      <a href="cv.pdf" class="cv-btn" target="_blank">
+        Download CV (PDF)
+      </a>
+    </div>
 
-        <h2 class="lang-zh">
-          仿脂肪细胞准零刚度隔振器设计
-        </h2>
-
-        <h2 class="lang-en">
-          Bio-inspired Quasi-Zero Stiffness Vibration Isolator
-        </h2>
-
-        <p class="lang-zh">
-          受脂肪细胞微结构启发，设计准零刚度隔振器。
-          使用 SolidWorks 进行结构建模，基于 Abaqus
-          开展有限元仿真分析，研究结构的静态与动力学隔振性能。
-        </p>
-
-        <p class="lang-en">
-          Inspired by adipose cell microstructures, this project focuses on
-          the design of quasi-zero stiffness vibration isolators.
-          SolidWorks is used for modeling, and Abaqus is employed
-          for finite element simulations.
-        </p>
-      </header>
-    </article>
-
-    <!-- Honors -->
-    <article class="post featured">
-      <header class="major">
-        <h2>Honors & Awards</h2>
-      </header>
-
-      <ul style="list-style: none; padding-left: 0;">
-        <li class="lang-zh">
-          国家励志奖学金（2024）<br />
-          上海交通大学校级三好学生（2024）<br />
-          上海交通大学校级优秀团员（2024–2025）<br />
-          全国大学生 AI+信息素养大赛 上海赛区一等奖（2024）
-        </li>
-
-        <li class="lang-en">
-          National Inspirational Scholarship (2024)<br />
-          Outstanding Student, SJTU (2024)<br />
-          Outstanding Communist Youth League Member, SJTU (2024–2025)<br />
-          First Prize, AI + Information Literacy Competition (Shanghai Division, 2024)
-        </li>
-      </ul>
-    </article>
-
-    <!-- Projects -->
-    <section class="posts">
-
-      <article>
-        <header>
-          <span class="date">Aug 2025 – Present</span>
-          <h2 class="lang-zh">仿脂肪细胞准零刚度隔振器</h2>
-          <h2 class="lang-en">Bio-inspired QZS Isolator</h2>
-        </header>
-        <p class="lang-zh">
-          基于仿生结构思想，设计准零刚度隔振器，并通过有限元方法
-          分析其刚度特性与隔振性能。
-        </p>
-        <p class="lang-en">
-          Designed quasi-zero stiffness isolators inspired by biological
-          microstructures and evaluated their performance via FEM simulations.
-        </p>
-      </article>
-
-      <article>
-        <header>
-          <span class="date">Dec 2024 – Feb 2026</span>
-          <h2 class="lang-zh">纯电座舱声学测量与评价</h2>
-          <h2 class="lang-en">Acoustic Evaluation of EV Cabin</h2>
-        </header>
-        <p class="lang-zh">
-          使用 Matlab 对不同路况下的车内噪声信号进行预处理，
-          并提取关键声学参数用于性能评价。
-        </p>
-        <p class="lang-en">
-          Conducted acoustic signal preprocessing and parameter extraction
-          using Matlab to evaluate cabin noise under various road conditions.
-        </p>
-      </article>
-
-    </section>
-
+    <div class="controls">
+      <button onclick="switchLang('zh')">中文</button>
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <section class="split contact">
-      <section>
-        <h3>Email</h3>
-        <p>
-          <a href="mailto:leisurelee@sjtu.edu.cn">leisurelee@sjtu.edu.cn</a>
-        </p>
-      </section>
-    </section>
+  <!-- Research -->
+  <h2>Research</h2>
+
+  <p class="lang-zh">
+    <strong>仿脂肪细胞准零刚度隔振器设计</strong><br>
+    受脂肪细胞微结构启发，设计准零刚度隔振器，
+    使用 SolidWorks 建模，并基于 Abaqus 进行有限元分析，
+    研究其静态与动力学隔振性能。
+  </p>
+
+  <p class="lang-en">
+    <strong>Bio-inspired Quasi-Zero Stiffness Vibration Isolator</strong><br>
+    This project focuses on the design of quasi-zero stiffness vibration
+    isolators inspired by adipose cell microstructures.
+    SolidWorks is used for modeling, and Abaqus for finite element simulations.
+  </p>
+
+  <!-- Publications -->
+  <h2>Publications</h2>
+
+  <ul class="lang-zh">
+    <li>（准备中 / Under preparation）</li>
+  </ul>
+
+  <ul class="lang-en">
+    <li>Under preparation.</li>
+  </ul>
+
+  <!-- Projects -->
+  <h2>Projects</h2>
+
+  <ul class="lang-zh">
+    <li>
+      <strong>纯电座舱声学测量与评价（PRP 项目）</strong><br>
+      使用 Matlab 对不同路况下的车内噪声信号进行预处理，
+      并计算关键声学参数用于性能评价。
+    </li>
+  </ul>
+
+  <ul class="lang-en">
+    <li>
+      <strong>Acoustic Evaluation of Electric Vehicle Cabin</strong><br>
+      Performed acoustic signal preprocessing and parameter extraction
+      using Matlab to evaluate cabin noise under various road conditions.
+    </li>
+  </ul>
+
+  <!-- Honors -->
+  <h2>Honors & Awards</h2>
+
+  <ul class="lang-zh">
+    <li>国家励志奖学金（2024）</li>
+    <li>上海交通大学校级三好学生（2024）</li>
+    <li>上海交通大学校级优秀团员（2024–2025）</li>
+    <li>全国大学生 AI+信息素养大赛 上海赛区一等奖（2024）</li>
+  </ul>
+
+  <ul class="lang-en">
+    <li>National Inspirational Scholarship (2024)</li>
+    <li>Outstanding Student, SJTU (2024)</li>
+    <li>Outstanding Communist Youth League Member, SJTU (2024–2025)</li>
+    <li>First Prize, AI + Information Literacy Competition (Shanghai Division, 2024)</li>
+  </ul>
+
+  <!-- Contact -->
+  <h2>Contact</h2>
+
+  <p>Email: <a href="mailto:leisurelee@sjtu.edu.cn">leisurelee@sjtu.edu.cn</a></p>
+  <p>GitHub: <a href="https://github.com/你的GitHub用户名">https://github.com/你的GitHub用户名</a></p>
+
+  <footer>
+    © HaiXu Li
   </footer>
 
-  <!-- Copyright -->
-  <div id="copyright">
-    <ul>
-      <li>&copy; HaiXu Li</li>
-      <li>Design: HTML5 UP</li>
-    </ul>
-  </div>
-
 </div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 
 <script>
   function switchLang(lang) {
@@ -218,8 +223,12 @@
       el.style.display = (lang === 'en') ? 'block' : 'none';
     });
   }
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  }
 </script>
 
 </body>
 </html>
-
