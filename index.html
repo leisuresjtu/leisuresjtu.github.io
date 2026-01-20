@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <title>HaiXu Li | Academic Homepage</title>
+  <title>HaiXu Li | Personal Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -24,55 +24,24 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   "Helvetica Neue", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
       transition: background 0.3s, color 0.3s;
     }
 
-    a {
-      color: var(--text);
-    }
+    a { color: var(--text); text-decoration: none; }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.3rem;
-    }
+    h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
+    h2 { font-size: 1.4rem; margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    p { margin: 0.5rem 0; color: var(--subtext); }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.5rem 0; }
 
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 2.5rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.3rem;
-    }
-
-    p {
-      margin: 0.5rem 0;
-      color: var(--subtext);
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin: 0.5rem 0;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
 
     .controls button {
       margin-left: 0.4rem;
@@ -84,43 +53,9 @@
       color: var(--text);
     }
 
-    .lang-en {
-      display: none;
-    }
+    .lang-en { display: none; }
 
-    /* Mail form */
-    .mail-form {
-      margin-top: 1rem;
-      max-width: 600px;
-    }
-
-    .mail-form input,
-    .mail-form textarea {
-      width: 100%;
-      margin: 0.4rem 0;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-      background: var(--bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-      font-family: inherit;
-    }
-
-    .mail-form button {
-      margin-top: 0.6rem;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-      background: var(--btn-bg);
-      border: 1px solid var(--border);
-      cursor: pointer;
-      color: var(--text);
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: var(--subtext);
-    }
+    footer { margin-top: 3rem; font-size: 0.9rem; color: var(--subtext); }
   </style>
 </head>
 
@@ -139,8 +74,7 @@
       </p>
 
       <p class="lang-en">
-        Undergraduate Student<br>
-        School of Mechanical Engineering, Shanghai Jiao Tong University<br>
+        Undergraduate Student, School of Mechanical Engineering, Shanghai Jiao Tong University<br>
         Research Interests: Vibration Isolation, Structural Mechanics, FEM
       </p>
     </div>
@@ -169,60 +103,74 @@
     SolidWorks is used for modeling, and Abaqus for finite element simulations.
   </p>
 
-  <!-- Publications -->
-  <h2>Publications</h2>
+  <!-- Projects -->
+  <h2>Projects</h2>
 
   <ul class="lang-zh">
-    <li>（准备中 / Under preparation）</li>
+    <li>
+      <strong>纯电座舱声学测量与评价（PRP 项目）</strong><br>
+      使用 Matlab 对不同路况下的车内噪声信号进行预处理，
+      并计算关键声学参数用于性能评价。
+    </li>
   </ul>
 
   <ul class="lang-en">
-    <li>Under preparation.</li>
+    <li>
+      <strong>Acoustic Evaluation of Electric Vehicle Cabin</strong><br>
+      Performed acoustic signal preprocessing and parameter extraction
+      using Matlab to evaluate cabin noise under various road conditions.
+    </li>
+  </ul>
+
+  <!-- Honors -->
+  <h2>Honors & Awards</h2>
+
+  <ul class="lang-zh">
+    <li>国家励志奖学金（2024）</li>
+    <li>上海交通大学校级三好学生（2024）</li>
+    <li>上海交通大学校级优秀团员（2024–2025）</li>
+    <li>全国大学生 AI+信息素养大赛 上海赛区一等奖（2024）</li>
+  </ul>
+
+  <ul class="lang-en">
+    <li>National Inspirational Scholarship (2024)</li>
+    <li>Outstanding Student, SJTU (2024)</li>
+    <li>Outstanding Communist Youth League Member, SJTU (2024–2025)</li>
+    <li>First Prize, AI + Information Literacy Competition (Shanghai Division, 2024)</li>
   </ul>
 
   <!-- Contact -->
   <h2>Contact</h2>
 
-  <p>
-    Email: <a href="mailto:leisurelee@sjtu.edu.cn">leisurelee@sjtu.edu.cn</a>
-  </p>
+  <p>Email: <a href="mailto:leisurelee@sjtu.edu.cn">leisurelee@sjtu.edu.cn</a></p>
+  <p>GitHub: <a href="https://github.com/你的GitHub用户名">https://github.com/你的GitHub用户名</a></p>
 
-  <div class="mail-form">
-    <input id="mail-subject" type="text" placeholder="Subject / 主题" />
-    <textarea id="mail-body" rows="4" placeholder="Message / 内容"></textarea>
-    <button onclick="sendMail()">Send Email</button>
-  </div>
-
-  <footer>
-    © HaiXu Li
-  </footer>
+  <footer>© HaiXu Li</footer>
 
 </div>
 
 <script>
-  function switchLang(lang) {
+
+  let lang = localStorage.getItem('lang') || 'en';
+  switchLang(lang);
+
+  function switchLang(selectedLang) {
+    localStorage.setItem('lang', selectedLang);
+
     document.querySelectorAll('.lang-zh').forEach(el => {
-      el.style.display = (lang === 'zh') ? 'block' : 'none';
+      el.style.display = (selectedLang === 'zh') ? 'block' : 'none';
     });
     document.querySelectorAll('.lang-en').forEach(el => {
-      el.style.display = (lang === 'en') ? 'block' : 'none';
+      el.style.display = (selectedLang === 'en') ? 'block' : 'none';
     });
+
+
+    document.title = selectedLang === 'zh' ? "李海旭 | 个人主页" : "HaiXu Li | Personal Homepage";
   }
 
   function toggleTheme() {
     const html = document.documentElement;
     html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-  }
-
-  function sendMail() {
-    const subject = encodeURIComponent(
-      document.getElementById('mail-subject').value
-    );
-    const body = encodeURIComponent(
-      document.getElementById('mail-body').value
-    );
-    window.location.href =
-      `mailto:leisurelee@sjtu.edu.cn?subject=${subject}&body=${body}`;
   }
 </script>
 
