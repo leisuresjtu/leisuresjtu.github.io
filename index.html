@@ -12,6 +12,7 @@
       --subtext: #555555;
       --border: #dddddd;
       --btn-bg: #f5f5f5;
+      --link: #6aa6d6;
     }
 
     [data-theme="dark"] {
@@ -31,17 +32,43 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    a { color: var(--text); text-decoration: none; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
+    }
 
-    h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
-    h2 { font-size: 1.4rem; margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
-    p { margin: 0.5rem 0; color: var(--subtext); }
-    ul { padding-left: 1.2rem; }
-    li { margin: 0.5rem 0; }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
 
-    .header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
+    p {
+      margin: 0.5rem 0;
+      color: var(--subtext);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
 
     .controls button {
       margin-left: 0.4rem;
@@ -53,9 +80,28 @@
       color: var(--text);
     }
 
-    .lang-en { display: none; }
+    .lang-en {
+      display: none;
+    }
 
-    footer { margin-top: 3rem; font-size: 0.9rem; color: var(--subtext);
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--subtext);
+    }
+
+    /* Contact & Friends links style */
+    p a,
+    .friend-links a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    p a:hover,
+    .friend-links a:hover {
+      text-decoration: underline;
+    }
+
     .friend-links {
       list-style: none;
       padding-left: 0;
@@ -65,17 +111,6 @@
     .friend-links li {
       margin: 0.5rem 0;
     }
-
-    .friend-links a {
-      color: var(--subtext);
-      transition: color 0.2s;
-    }
-
-    .friend-links a:hover {
-      color: var(--text);
-    }
-           }
-    
   </style>
 </head>
 
@@ -89,7 +124,6 @@
       <h1 class="lang-en">HaiXu Li</h1>
       <h1 class="lang-zh">李海旭</h1>
 
-      
       <p class="lang-zh">
         上海交通大学 机械与动力工程学院 本科生<br>
         研究方向：隔振结构 · 结构力学 · 有限元分析
@@ -182,13 +216,12 @@
       </a>
     </li>
   </ul>
+
   <footer>© 2026 HaiXu Li</footer>
 
-  
 </div>
 
 <script>
-
   let lang = localStorage.getItem('lang') || 'en';
   switchLang(lang);
 
@@ -198,28 +231,22 @@
     document.querySelectorAll('.lang-zh').forEach(el => {
       el.style.display = (selectedLang === 'zh') ? 'block' : 'none';
     });
+
     document.querySelectorAll('.lang-en').forEach(el => {
       el.style.display = (selectedLang === 'en') ? 'block' : 'none';
     });
 
-
-    document.title = selectedLang === 'zh' ? "李海旭 | 个人主页" : "HaiXu Li | Personal Homepage";
+    document.title = selectedLang === 'zh'
+      ? "李海旭 | 个人主页"
+      : "HaiXu Li | Personal Homepage";
   }
 
   function toggleTheme() {
     const html = document.documentElement;
-    html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    html.dataset.theme =
+      html.dataset.theme === 'dark' ? 'light' : 'dark';
   }
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
